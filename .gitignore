@@ -17,3 +17,5 @@
 /.idea/
 /tags/
 /config/application.yml
+
+coverage/

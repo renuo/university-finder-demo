@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :university do
-    web_page 'MyString'
-    name 'MyString'
-    alpha_two_code 'MyString'
-    state 'MyString'
-    domain 'MyString'
-    country 'MyString'
+    web_page 'http://example.com'
+    name 'Name'
+    alpha_two_code 'alpha code'
+    state 'state'
+    domain 'domain.com'
+    country 'Switzerland'
   end
 end
