@@ -1,6 +1,9 @@
 class UniversitiesController < ApplicationController
   def index
-    @universities = University.all.limit(50)
+    @query = params[:query].presence
+    queried_universities = University.all
+    queried_universities = queried_universities.full_text_search(@query) if @query
+    @universities = queried_universities.page(params[:page])
   end
 
   def show
