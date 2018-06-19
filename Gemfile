@@ -27,6 +27,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'mdl', require: false
+  gem 'percy-capybara'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
