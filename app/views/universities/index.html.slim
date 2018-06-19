@@ -1,0 +1,7 @@
+h1 Universities list
+
+.list-group
+  - @universities.each do |university|
+    = link_to university, class: 'list-group-item list-group-item-action flex-column align-items-start' do
+      h5 = university.name
+      small = university_label(university)

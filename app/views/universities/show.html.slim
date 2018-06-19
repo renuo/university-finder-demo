@@ -1,0 +1,8 @@
+= link_to '< Back home', root_path, class: 'mb-4 d-block'
+
+h1.mb-5 University Details
+.card
+  .card-body
+    h4.card-title = @university.name
+    h6.card-subtitle.mb-2.text-muted = university_label(@university)
+    a.card-link[href=@university.web_page] = @university.web_page

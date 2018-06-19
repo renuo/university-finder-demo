@@ -20,3 +20,7 @@ Style/NonNilCheck:
 
 Metrics/BlockLength:
   Exclude:
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'

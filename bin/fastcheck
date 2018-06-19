@@ -11,6 +11,6 @@ then
 fi
 
 bundle exec brakeman -q -z --no-summary --no-pager
-bundle exec mdl ./
+bundle exec mdl ./README.md
 # bundle exec scss-lint `find app/assets/stylesheets/ -name "*.scss"`
 bundle exec slim-lint app/views/ -c .slim-lint.yml
