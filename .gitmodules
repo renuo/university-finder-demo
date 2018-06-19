@@ -1,0 +1,2 @@
+[submodule "db/seed_data/university-domains-list"]
+	url = https://github.com/Hipo/university-domains-list.git
