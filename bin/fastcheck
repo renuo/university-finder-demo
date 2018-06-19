@@ -1,1 +1,16 @@
 #!/bin/sh
+
+set -e
+
+if ! bundle exec rubocop -D -c .rubocop.yml --fail-fast
+then
+  echo 'rubocop detected issues!'
+  bundle exec rubocop -a -D -c .rubocop.yml
+  echo 'Tried to auto correct the issues, but must be reviewed manually, commit aborted'
+  exit 1
+fi
+
+bundle exec brakeman -q -z --no-summary --no-pager
+bundle exec mdl ./
+# bundle exec scss-lint `find app/assets/stylesheets/ -name "*.scss"`
+bundle exec slim-lint app/views/ -c .slim-lint.yml
