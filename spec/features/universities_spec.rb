@@ -19,4 +19,17 @@ RSpec.describe 'Universities' do
       end
     end
   end
+
+  describe 'details page' do
+    let(:university) { create :university }
+
+    before do
+      visit university_path(university)
+    end
+
+    it 'renders the name' do
+      expect(page).to have_content university.name
+      Percy::Capybara.snapshot(page, name: 'University details page')
+    end
+  end
 end

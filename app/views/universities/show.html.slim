@@ -4,10 +4,13 @@ h1.mb-5 University Details
 .card
   .card-body
     .row
-      .col-2
+      .col-12.col-sm-2.order-1.order-sm-1
         = image_tag 'uni.png', class: 'w-100'
-      .col-10
+      .col-11.col-sm-9.order-3.order-sm-2
         h4.card-title = @university.name
         h6.card-subtitle.mb-2.text-muted = university_label(@university)
-        a.card-link[href=@university.web_page] = @university.web_page
-        a.card-link[href="https://www.google.com/maps/search/#{URI.encode(@university.name)}"] Open in Google Maps
+        .row
+          a.card-link.col-3[href=@university.web_page] Open Website
+          a.card-link.col-5[href=google_maps_link(@university)] Open in Google Maps
+      .col-sm-1.order-2.order-sm-3
+        small.badge.badge-primary = @university.alpha_two_code
